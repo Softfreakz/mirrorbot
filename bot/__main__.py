@@ -52,12 +52,11 @@ def stats(update, context):
 @run_async
 def start(update, context):
     start_string = f'''
-This bot can mirror all your links to Google drive!
-Type /{BotCommands.HelpCommand} to get a list of available commands
+I am a servant of my master SOftfreakz! can mirror all your links to Google drive!
 '''
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Repo", "https://github.com/breakdowns/slam-mirrorbot")
-    buttons.buildbutton("Support Group", "https://t.me/SlamMirrorSupport")
+    buttons.buildbutton("Contact My Master! 😉", "https://t.me/Softfreakz")
+    buttons.buildbutton("Donate to Sonu Sood Charity 🙏", "https://soodcharityfoundation.org")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     LOGGER.info('UID: {} - UN: {} - MSG: {}'.format(update.message.chat.id, update.message.chat.username, update.message.text))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
